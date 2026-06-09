@@ -77,7 +77,7 @@
 <main id="contenido">
 <section class="section section--white" id="historia">
   <div class="container">
-    <div class="section-label">Historia y contexto</div>
+    <div class="prose-head"><div class="section-label">Historia y contexto</div></div>
     <div class="prose reveal">
       <h2 class="section-title" style="margin-bottom:1.5rem">Setenta años de ideas, ciclos y transformaciones</h2>
       <p>La inteligencia artificial es un área de la informática que ha tenido un impacto significativo en el desarrollo tecnológico de nuestra sociedad. Aunque hoy suele presentarse como una innovación reciente, su historia se extiende por más de siete décadas y está marcada por ciclos recurrentes de entusiasmo y desencanto. Abordar esta trayectoria histórica no es un ejercicio académico, sino una herramienta fundamental para comprender cómo se construyen las expectativas en torno a la tecnología y por qué su adopción, especialmente en industrias culturales como el periodismo, depende menos de los avances técnicos que de las decisiones organizacionales, los contextos económicos y las prácticas profesionales que la rodean.</p>
@@ -90,10 +90,30 @@
       <p>Comprender este recorrido histórico permite avanzar en los capítulos de esta guía con una mirada menos fascinada por la novedad y más atenta a los criterios, marcos y responsabilidades que exige una integración sostenible de la inteligencia artificial en las redacciones.</p>
     </div>
 
-    <div class="callout--cyan reveal" style="margin-top:3.5rem">
-      <p><strong>La historia de la IA es densa y vertiginosa.</strong> Para recorrerla en detalle, con cada hito, referencia y contexto, se desarrolló una línea de tiempo interactiva disponible como recurso digital. Desde el Test de Turing en 1950 hasta la consolidación de la IA soberana en 2026, setenta años de ideas, personas y decisiones que explican el presente.</p>
-      <a href="https://redacciones5g.com/linea-de-tiempo-ia" target="_blank" class="callout-link">→ Explorá la línea de tiempo completa — De Alan Turing a la IA Soberana (1950–2026)</a>
-    </div>
+    <a class="timeline-cta reveal" href="timeline_ia.html" target="_blank" rel="noopener noreferrer" style="margin-top:3.5rem">
+      <div class="timeline-cta-body">
+        <div class="timeline-cta-tag">Recurso digital</div>
+        <h3 class="timeline-cta-title">Línea de tiempo de la IA</h3>
+        <p class="timeline-cta-desc">La historia de la IA es densa y vertiginosa. Para recorrerla en detalle, con cada hito, referencia y contexto, se desarrolló una línea de tiempo interactiva. Desde el Test de Turing en 1950 hasta la consolidación de la IA soberana en 2026, setenta años de ideas, personas y decisiones que explican el presente.</p>
+        <span class="timeline-cta-btn">
+          Explorar la línea de tiempo
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+        </span>
+      </div>
+      <div class="timeline-cta-visual" aria-hidden="true">
+        <div class="timeline-cta-rail">
+          <span class="rail-dot rail-dot--start"></span>
+          <span class="rail-dot rail-dot--mid"></span>
+          <span class="rail-dot rail-dot--mid-late"></span>
+          <span class="rail-dot rail-dot--end"></span>
+        </div>
+        <div class="timeline-cta-years">
+          <span>1950</span>
+          <span>2026</span>
+        </div>
+        <div class="timeline-cta-label">70+ años · 80+ hitos</div>
+      </div>
+    </a>
   </div>
 </section>
 
@@ -101,10 +121,12 @@
 <!-- DEFINICIÓN DE TÉRMINOS -->
 <section class="section section--gray" id="terminos">
   <div class="container">
+    <div class="prose-head">
     <div class="section-label">Vocabulario compartido</div>
     <h2 class="section-title reveal">Definición de términos asociados a la inteligencia artificial</h2>
     <p class="lead reveal" style="transition-delay:.1s">El campo de la inteligencia artificial tiene su propio vocabulario, denso y en permanente expansión. Construir ese lenguaje compartido entre periodistas, responsables editoriales, equipos de producto y responsables de tecnología es lo que permite pasar de la fascinación o el escepticismo a decisiones concretas y fundamentadas.</p>
-    <p class="reveal" style="transition-delay:.15s;max-width:72ch;color:var(--g700)">Los términos de este glosario no están organizados alfabéticamente. Siguen el orden de las capas tecnológicas que componen la inteligencia artificial, de la más general a la más específica. Cada capa depende de la anterior para existir y funcionar.</p>
+    <p class="reveal" style="transition-delay:.15s;color:var(--g700)">Los términos de este glosario no están organizados alfabéticamente. Siguen el orden de las capas tecnológicas que componen la inteligencia artificial, de la más general a la más específica. Cada capa depende de la anterior para existir y funcionar.</p>
+    </div>
 
     <div class="layer-intro reveal" style="transition-delay:.2s">
       <div class="layer-pill">
@@ -143,10 +165,12 @@
 
 
 <!-- GLOSARIO -->
-<section class="section section--white" id="glosario">
+<section class="section section--gray" id="glosario" style="padding-top:1rem">
   <div class="container">
+    <div class="prose-head">
     <div class="section-label">Glosario</div>
     <h2 class="section-title reveal" style="margin-bottom:3rem">Términos fundamentales para navegar el ecosistema de la IA</h2>
+    </div>
 
     <!-- CAPA 1 -->
     <div class="gloss-section reveal">
@@ -335,15 +359,17 @@
 <!-- PROMPT ENGINEERING -->
 <section class="section section--dark" id="prompts">
   <div class="container">
+    <div class="prose-head">
     <div class="section-label">Competencia central</div>
     <h2 class="section-title section-title--light reveal">¿Qué es un <em>prompt</em>?</h2>
     <p class="lead lead--light reveal" style="transition-delay:.1s">En el contexto de la inteligencia artificial generativa, un <em>prompt</em> es la instrucción o conjunto de instrucciones que se le da a un sistema para inducir una respuesta específica o generar contenido nuevo. El <em>prompt</em> actúa como un disparador, orientando al modelo sobre qué tipo de información debe producir o qué tarea realizar.</p>
+    </div>
 
     <div class="callout reveal" style="transition-delay:.15s">
       El <em>prompt engineering</em> es la práctica de diseñar, probar y optimizar instrucciones para sistemas de IA con el objetivo de obtener <em>outputs</em> más precisos, relevantes y útiles. Va más allá de hacer preguntas simples: implica entender cómo estructurar contexto, ejemplos y restricciones para maximizar la calidad de las respuestas.
     </div>
 
-    <h3 class="section-title section-title--light reveal" style="font-size:1.3rem;margin-top:3rem;margin-bottom:1.5rem">Cómo funciona un <em>prompt</em> paso a paso</h3>
+    <h3 class="section-title section-title--light reveal" style="font-size:1.3rem;margin:3rem auto 1.5rem;max-width:720px">Cómo funciona un <em>prompt</em> paso a paso</h3>
 
     <div class="reveal" style="transition-delay:.1s;border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,.1);">
 
@@ -389,8 +415,8 @@
 
     </div>
 
-    <h3 class="section-title section-title--light reveal" style="font-size:1.3rem;margin-top:4rem;margin-bottom:.5rem">Ejemplo práctico avanzado</h3>
-    <p class="reveal" style="color:var(--g200);font-size:.9rem;max-width:72ch;margin-bottom:1.5rem;transition-delay:.05s">En 2026, el uso profesional de la IA generativa en redacciones ya trasciende los <em>prompts</em> únicos. Las tareas periodísticas más complejas requieren cadenas de instrucciones donde cada paso alimenta el siguiente. El siguiente ejemplo ilustra cómo una redacción puede diseñar un sistema de <em>prompts</em> para producir una cobertura especial sobre agua y acceso al recurso hídrico en América Latina.</p>
+    <h3 class="section-title section-title--light reveal" style="font-size:1.3rem;margin:4rem auto .5rem;max-width:720px">Ejemplo práctico avanzado</h3>
+    <p class="reveal" style="color:var(--g200);font-size:.9rem;max-width:720px;margin:0 auto 1.5rem;transition-delay:.05s">En 2026, el uso profesional de la IA generativa en redacciones ya trasciende los <em>prompts</em> únicos. Las tareas periodísticas más complejas requieren cadenas de instrucciones donde cada paso alimenta el siguiente. El siguiente ejemplo ilustra cómo una redacción puede diseñar un sistema de <em>prompts</em> para producir una cobertura especial sobre agua y acceso al recurso hídrico en América Latina.</p>
 
     <div class="example-block reveal" style="transition-delay:.1s">
       <div class="example-step">
@@ -407,19 +433,21 @@
       </div>
     </div>
 
-    <p class="reveal" style="color:var(--g200);font-size:.9rem;max-width:72ch;margin-top:2rem;transition-delay:.1s">Este flujo en tres pasos ilustra el salto cualitativo entre usar IA como generador de texto y usarla como parte de un sistema editorial con criterios explícitos, restricciones definidas y supervisión humana en cada etapa. El periodista organiza el proceso, lo supervisa y toma las decisiones finales. La IA amplía su capacidad de procesamiento y acelera etapas intermedias; el juicio editorial sigue siendo responsabilidad humana.</p>
+    <p class="reveal" style="color:var(--g200);font-size:.9rem;max-width:720px;margin:2rem auto 0;transition-delay:.1s">Este flujo en tres pasos ilustra el salto cualitativo entre usar IA como generador de texto y usarla como parte de un sistema editorial con criterios explícitos, restricciones definidas y supervisión humana en cada etapa. El periodista organiza el proceso, lo supervisa y toma las decisiones finales. La IA amplía su capacidad de procesamiento y acelera etapas intermedias; el juicio editorial sigue siendo responsabilidad humana.</p>
   </div>
 </section>
 
 
 <!-- REFLEXIÓN FINAL -->
-<section class="section section--violet" id="reflexion">
+<section class="section section--white section--cierre" id="reflexion">
   <div class="container">
-    <div class="section-label" style="color:var(--cyan)">Reflexión final</div>
-    <h2 class="section-title section-title--light reveal">Reflexión final</h2>
-    <div class="closing-text reveal" style="transition-delay:.1s">
-      <p style="color:var(--g200)">Dominar la terminología de la IA es una condición para participar con criterio propio en las decisiones que hoy atraviesan todas las redacciones: qué automatizar y qué preservar, cómo supervisar sistemas generativos, dónde establecer límites editoriales y cómo comunicar a las audiencias el rol de estas tecnologías en la producción de contenido.</p>
-      <p style="color:var(--g200)">El ecosistema de la IA seguirá produciendo nuevos términos, sistemas y capacidades. Lo que permanece constante es la necesidad de evaluarlos desde una perspectiva periodística: qué problema editorial resuelven, qué riesgos introducen y qué principios deben gobernar su uso. Con ese marco, el glosario de este capítulo funciona como punto de partida para continuar aprendiendo en un campo que no dejará de moverse.</p>
+    <div class="prose-head">
+    <div class="section-label">Reflexión final</div>
+    <h2 class="section-title reveal">Reflexión final</h2>
+    </div>
+    <div class="prose reveal" style="transition-delay:.1s">
+      <p>Dominar la terminología de la IA es una condición para participar con criterio propio en las decisiones que hoy atraviesan todas las redacciones: qué automatizar y qué preservar, cómo supervisar sistemas generativos, dónde establecer límites editoriales y cómo comunicar a las audiencias el rol de estas tecnologías en la producción de contenido.</p>
+      <p>El ecosistema de la IA seguirá produciendo nuevos términos, sistemas y capacidades. Lo que permanece constante es la necesidad de evaluarlos desde una perspectiva periodística: qué problema editorial resuelven, qué riesgos introducen y qué principios deben gobernar su uso. Con ese marco, el glosario de este capítulo funciona como punto de partida para continuar aprendiendo en un campo que no dejará de moverse.</p>
     </div>
   </div>
 </section>
