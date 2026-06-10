@@ -3,12 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Roles de IA en Redacciones — Periodismo IA</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+<title>Roles de IA en Redacciones | PeriodismoIA 2026</title>
+<meta name="description" content="Mapa de 80 funciones reales de IA en redacciones de 24 países, organizadas en cuatro familias funcionales. Recurso aplicado del capítulo 4 de la Guía PeriodismoIA 2026.">
+<meta name="author" content="Álvaro Liuzzi">
+<meta name="theme-color" content="#0D1B3E">
+<link rel="canonical" href="https://periodismoia.com/cap4-roles-ia.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="PeriodismoIA 2026">
+<meta property="og:title" content="Roles de IA en Redacciones | PeriodismoIA 2026">
+<meta property="og:description" content="80 funciones reales en medios de 24 países, organizadas en cuatro familias funcionales.">
+<meta property="og:url" content="https://periodismoia.com/cap4-roles-ia.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/chapter.css">
 <style>
   :root {
-    --bg-deep: #0D0F2E;
-    --bg-mid: #1A1F4E;
+    --bg-deep: #0D1B3E;
+    --bg-mid: #15224A;
     --accent: #00AEEF;
     --accent2: #29B8F0;
     --blue-ui: #2D6BE4;
@@ -22,60 +34,62 @@
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
+  html, body {
+    background: var(--bg-deep) !important;
+  }
   body {
-    background: var(--bg-deep);
     color: var(--text-body);
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'DM Sans', system-ui, sans-serif;
     min-height: 100vh;
     overflow-x: hidden;
   }
+  main { background: var(--bg-deep); }
 
   /* === HERO === */
   .hero {
     position: relative;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 6% 7%;
+    justify-content: flex-end;
+    align-items: stretch;
+    padding: 8rem clamp(1.5rem, 7vw, 5rem) 4rem;
     overflow: hidden;
+    max-width: 1180px;
+    margin: 0 auto;
+    background: transparent;
+    min-height: auto;
   }
 
   .hero-bg-dots {
     position: absolute;
     inset: 0;
-    background-image: radial-gradient(circle, rgba(0,174,239,0.18) 1px, transparent 1px);
+    background-image: radial-gradient(circle, rgba(0,180,216,0.14) 1px, transparent 1px);
     background-size: 32px 32px;
+    -webkit-mask: radial-gradient(120% 110% at 0% 100%, #000 0%, #000 24%, transparent 78%);
+    mask: radial-gradient(120% 110% at 0% 100%, #000 0%, #000 24%, transparent 78%);
+    z-index: 0;
+    pointer-events: none;
+  }
+  .hero-bg-dots-2 {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(255,255,255,.22) 1.2px, transparent 1.5px);
+    background-size: 24px 24px;
+    -webkit-mask: radial-gradient(90% 90% at 100% 0%, #000 0%, #000 16%, transparent 62%);
+    mask: radial-gradient(90% 90% at 100% 0%, #000 0%, #000 16%, transparent 62%);
     z-index: 0;
     pointer-events: none;
   }
 
-  .hero-arc-1 {
+  .hero-bg-svg {
     position: absolute;
-    top: -80px; right: -80px;
-    width: 500px; height: 500px;
-    border: 1.5px solid rgba(0,174,239,0.35);
-    border-radius: 50%;
-    clip-path: polygon(0 0, 50% 0, 100% 50%, 100% 100%, 0 100%);
+    top: 50%;
+    right: -120px;
+    transform: translateY(-50%);
+    width: 520px;
+    height: 520px;
     z-index: 0;
-  }
-  .hero-arc-2 {
-    position: absolute;
-    bottom: -120px; right: 120px;
-    width: 320px; height: 320px;
-    border: 1px solid rgba(139,111,190,0.4);
-    border-radius: 50%;
-    clip-path: polygon(0 50%, 50% 0, 100% 0, 100% 100%, 0 100%);
-    z-index: 0;
-  }
-  .hero-circle {
-    position: absolute;
-    top: 30%; right: 12%;
-    width: 180px; height: 180px;
-    border: 1px solid rgba(41,184,240,0.25);
-    border-radius: 50%;
-    background: rgba(139,111,190,0.06);
-    z-index: 0;
+    pointer-events: none;
   }
 
   .badge {
@@ -86,8 +100,9 @@
     border-radius: 100px;
     padding: 6px 16px;
     font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 0.06em;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
     color: var(--white);
     margin-bottom: 28px;
     width: fit-content;
@@ -135,7 +150,7 @@
     color: var(--white);
   }
   .t-bold {
-    font-weight: 600;
+    font-weight: 700;
     color: var(--accent2);
   }
 
@@ -189,7 +204,7 @@
     padding-top: 32px;
   }
   .filter-btn {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'DM Sans', system-ui, sans-serif;
     background: transparent;
     border: 1px solid rgba(255,255,255,0.15);
     color: var(--text-body);
@@ -392,20 +407,54 @@
 </style>
 </head>
 <body>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+<!-- NAV FIJA -->
+<nav class="site-nav" aria-label="Navegación principal">
+  <div class="nav-inner">
+    <a href="index.html#top" class="nav-brand">Periodismo<span>IA</span><span class="ver">v2.0</span></a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="introduccion.html">Introducción</a></li>
+        <li><a href="index.html#capitulos">Capítulos</a></li>
+        <li><a href="sobre-metodologia.html">Metodología</a></li>
+        <li><a href="sobre-programa.html">Programa</a></li>
+        <li><a href="sobre-alvaro.html">Autor</a></li>
+      </ul>
+      <a href="index.html#capitulos" class="nav-cta">Explorar la guía</a>
+      <button class="nav-burger" aria-label="Menú" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-bg-dots"></div>
-  <div class="hero-arc-1"></div>
-  <div class="hero-arc-2"></div>
-  <div class="hero-circle"></div>
+  <div class="hero-bg-dots" aria-hidden="true"></div>
+  <div class="hero-bg-dots-2" aria-hidden="true"></div>
+  <svg class="hero-bg-svg" viewBox="0 0 520 520" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="260" cy="260" r="240" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+    <circle cx="260" cy="260" r="180" stroke="rgba(0,180,216,0.28)" stroke-width="1.4"/>
+    <circle cx="260" cy="260" r="115" stroke="rgba(139,111,190,0.35)" stroke-width="1.2"/>
+    <circle cx="260" cy="260" r="60" fill="rgba(91,45,142,0.18)" stroke="rgba(91,45,142,0.5)" stroke-width="1"/>
+    <path id="roles-orb" d="M260 80 A180 180 0 1 1 259.9 80" fill="none"/>
+    <circle r="7" fill="#00B4D8">
+      <animate attributeName="opacity" values="0.55;1;0.55" dur="3s" repeatCount="indefinite"/>
+      <animateMotion dur="24s" repeatCount="indefinite"><mpath href="#roles-orb"/></animateMotion>
+    </circle>
+    <circle r="4" fill="#8B6FBE">
+      <animate attributeName="opacity" values="0.4;.85;0.4" dur="4s" repeatCount="indefinite"/>
+      <animateMotion dur="18s" repeatCount="indefinite" begin="3s">
+        <mpath href="#roles-orb-inner"/>
+      </animateMotion>
+    </circle>
+    <path id="roles-orb-inner" d="M260 145 A115 115 0 1 0 259.9 145" fill="none"/>
+  </svg>
 
   <div class="badge">
     <span class="badge-dot"></span>
     Capítulo 4 — Cuadro de referencia
   </div>
-
-  <p class="hero-label">Periodismo IA / Redacciones5G</p>
 
   <h1 class="hero-title">
     <span class="line-main"><span class="t-light">Roles de </span><span class="t-bold">IA</span></span>
@@ -443,6 +492,7 @@
   </div>
 </section>
 
+<main id="contenido">
 <section class="section-filters">
   <div class="filter-bar">
     <button class="filter-btn active" data-family="all" onclick="setFilter('all', this)">Todas las familias</button>
@@ -512,9 +562,17 @@
 
 </section>
 
+</main>
+
 <!-- FOOTER -->
-<footer class="footer">
-  <span class="footer-brand">Periodismo IA · Redacciones5G · Personal Argentina · v2.0</span>
+<footer>
+  <div>
+    <div class="footer-brand">Periodismo<span>IA</span><span class="ver">v2.0</span></div>
+  </div>
+  <div style="display:flex;gap:2rem">
+    <a href="index.html">← Inicio</a>
+    <a href="capitulo-4.html" style="color:var(--cyan)">Capítulo 4 →</a>
+  </div>
 </footer>
 
 <script>

@@ -85,7 +85,7 @@ body{font-family:'DM Sans',system-ui,sans-serif;background:var(--off);color:var(
   letter-spacing:-.03em;
   margin-bottom:.75rem;
 }
-.hero-title strong{font-weight:800;color:var(--cyan);}
+.hero-title span{font-weight:800;color:var(--cyan);}
 
 /* → v2.0 — pill outline */
 .hero-version{
