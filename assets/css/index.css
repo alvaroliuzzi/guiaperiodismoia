@@ -888,11 +888,13 @@ section[id], header[id] { scroll-margin-top: 88px; }
 /* Cover con patrón de puntos protagonista */
 .cap-cover--dotted { height: 150px; padding: 1.05rem 1.2rem; overflow: hidden; }
 .cap-cover--dotted::after { display: none; }
-.cov-dots { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; }
-.cap-cover--dotted .cnum { position: absolute; top: -1.2rem; right: .4rem; font-family: 'DM Serif Display', serif; font-size: 6.6rem; line-height: 1; color: rgba(255,255,255,.22); user-select: none; z-index: 3; }
+.cov-dots { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; transition: transform .9s cubic-bezier(.22,1,.36,1), filter .5s ease; transform-origin: 75% 25%; will-change: transform, filter; }
+.cap-cover--dotted .cnum { position: absolute; top: -1.2rem; right: .4rem; font-family: 'DM Serif Display', serif; font-size: 6.6rem; line-height: 1; color: rgba(255,255,255,.22); user-select: none; z-index: 3; transition: color .4s ease, transform .5s cubic-bezier(.22,1,.36,1); }
 .cap-cover--dotted .clabel { position: relative; z-index: 3; font-size: .64rem; }
 .cov-mark { transition: filter .3s ease, transform .4s cubic-bezier(.22,1,.36,1); }
 .cap-card:hover .cov-mark { filter: drop-shadow(0 0 12px rgba(255,255,255,.7)); }
+.cap-card:hover .cov-dots { transform: scale(1.06); filter: brightness(1.12); }
+.cap-card:hover .cap-cover--dotted .cnum { color: rgba(255,255,255,.28); }
 .cov-mesh { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
 .cov-meta { position: absolute; top: 1rem; left: 1.2rem; z-index: 3; font-family: 'DM Sans', sans-serif; font-size: .58rem; font-weight: 700; letter-spacing: .28em; color: rgba(255,255,255,.8); text-transform: uppercase; }
 .cov-spine { position: absolute; top: 50%; right: .95rem; transform: translateY(-50%); writing-mode: vertical-rl; z-index: 3; font-family: 'DM Sans', sans-serif; font-size: .58rem; font-weight: 700; letter-spacing: .32em; color: rgba(255,255,255,.55); text-transform: uppercase; }
@@ -966,12 +968,44 @@ html.hide-index .ruta, html.hide-index .ruta-caption { display: none; }
 .ruta-tl-item:hover .ruta-tl-dot { background: var(--segc, var(--cyan)); }
 .ruta-tl-item:hover .ruta-tl-label { color: var(--segc, var(--cyan)); }
 
-/* === Arco narrativo: barras conceptuales por movimiento === */
+/* === Arco narrativo: línea de progresión con 3 estaciones === */
+.ruta-arco { margin-top: 1.6rem; max-width: 1080px; }
+.ruta-arco-track { position: relative; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; padding-top: 3.2rem; }
+.ruta-arco-line { position: absolute; top: 2.5rem; left: 8%; right: 8%; height: 2px; background: linear-gradient(90deg, var(--violet) 0%, #6E8FB8 50%, var(--cyan) 100%); border-radius: 2px; }
+.ruta-arco-line::before, .ruta-arco-line::after { content: ''; position: absolute; top: 50%; width: 6px; height: 6px; border-radius: 50%; transform: translateY(-50%); }
+.ruta-arco-line::before { left: -4px; background: var(--violet); }
+.ruta-arco-line::after { right: -4px; background: var(--cyan); }
+.ruta-arco-station { position: relative; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0 .5rem; }
+.ruta-arco-dot { position: absolute; top: -2.8rem; left: 50%; transform: translateX(-50%); width: 22px; height: 22px; border-radius: 50%; border: 3px solid #fff; background: var(--violet); box-shadow: 0 0 0 6px rgba(91,45,142,.14), 0 0 0 14px rgba(91,45,142,.06); }
+.ruta-arco-dot--violet { background: var(--violet); box-shadow: 0 0 0 6px rgba(91,45,142,.14), 0 0 0 14px rgba(91,45,142,.06); }
+.ruta-arco-dot--cyan { background: var(--cyan); box-shadow: 0 0 0 6px rgba(0,180,216,.14), 0 0 0 14px rgba(0,180,216,.06); }
+.ruta-arco-dot--dual { background: linear-gradient(135deg, var(--violet), var(--cyan)); box-shadow: 0 0 0 6px rgba(45,112,180,.14), 0 0 0 14px rgba(45,112,180,.06); }
+.ruta-arco-kick { font-family: 'DM Sans', sans-serif; font-size: .62rem; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; color: var(--g400); margin-bottom: .4rem; }
+.ruta-arco-name { font-family: 'DM Serif Display', Georgia, serif; font-size: 1.55rem; color: var(--navy); line-height: 1.15; margin-bottom: .6rem; letter-spacing: -.01em; }
+.ruta-arco-sub { font-family: 'DM Sans', sans-serif; font-size: .87rem; color: var(--g700); line-height: 1.55; max-width: 30ch; margin: 0; }
+@media (max-width: 720px) {
+  .ruta-arco-track { grid-template-columns: 1fr; gap: 2.5rem; padding-top: 0; padding-left: 1rem; }
+  .ruta-arco-line { left: 1.6rem; right: auto; top: 0; bottom: 0; width: 2px; height: auto; background: linear-gradient(180deg, var(--violet) 0%, #6E8FB8 50%, var(--cyan) 100%); }
+  .ruta-arco-line::before { top: -4px; left: 50%; transform: translate(-50%, 0); }
+  .ruta-arco-line::after { right: auto; top: auto; bottom: -4px; left: 50%; transform: translate(-50%, 0); }
+  .ruta-arco-station { flex-direction: row; text-align: left; align-items: flex-start; gap: 1.2rem; padding: 0; }
+  .ruta-arco-dot { position: relative; top: 0; left: 0; transform: none; flex-shrink: 0; margin-top: .2rem; }
+  .ruta-arco-station > div:not(.ruta-arco-dot), .ruta-arco-station > p { text-align: left; }
+}
+
+/* === Barras conceptuales por movimiento === */
 .ruta-bar { display: flex; flex-direction: column; gap: 2px; margin-top: .6rem; border-radius: 12px; overflow: hidden; }
-.ruta-bar-seg { display: flex; align-items: center; padding: .85rem 1.1rem; position: relative; min-height: 44px; }
-.ruta-bar-seg::before { content: ''; position: absolute; left: .55rem; top: 50%; width: 4px; height: 4px; border-radius: 50%; background: var(--segc, var(--violet)); transform: translateY(-50%); opacity: .55; }
+.ruta-bar-seg { display: flex; align-items: center; padding: .85rem 1.1rem .85rem 1.3rem; position: relative; min-height: 44px; transition: background .35s ease; }
+.ruta-bar-seg::before { content: ''; position: absolute; left: .85rem; top: 50%; width: 4px; height: 4px; border-radius: 50%; background: var(--segc, var(--violet)); transform: translateY(-50%); opacity: .55; transition: width .35s cubic-bezier(.22,1,.36,1), height .35s cubic-bezier(.22,1,.36,1), opacity .3s ease, left .35s cubic-bezier(.22,1,.36,1); }
 .ruta-seg--dual .ruta-bar-seg::before { background: var(--violet); }
-.ruta-bar-title { font-family: 'DM Sans', sans-serif; font-size: .82rem; font-weight: 600; color: var(--navy); letter-spacing: -.005em; padding-left: .85rem; line-height: 1.3; }
+.ruta-bar-title { font-family: 'DM Sans', sans-serif; font-size: .82rem; font-weight: 600; color: var(--navy); letter-spacing: -.005em; padding-left: .65rem; line-height: 1.3; transition: color .35s ease, transform .4s cubic-bezier(.22,1,.36,1); }
+.ruta-bar-seg:hover { background: linear-gradient(135deg, rgba(91,45,142,.18) 0%, rgba(91,45,142,.08) 100%); }
+.ruta-seg--cyan .ruta-bar-seg:hover { background: linear-gradient(135deg, rgba(0,180,216,.18) 0%, rgba(0,180,216,.08) 100%); }
+.ruta-seg--dual .ruta-bar-seg:hover { background: linear-gradient(135deg, rgba(91,45,142,.14) 0%, rgba(0,180,216,.14) 100%); }
+.ruta-bar-seg:hover::before { width: 7px; height: 7px; opacity: 1; left: .7rem; }
+.ruta-bar-seg:hover .ruta-bar-title { transform: translateX(.2rem); color: var(--violet); }
+.ruta-seg--cyan .ruta-bar-seg:hover .ruta-bar-title { color: var(--cyan); }
+.ruta-seg--dual .ruta-bar-seg:hover .ruta-bar-title { color: var(--violet); }
 
 /* Variante violet (M1 — Fundamentos): todos los segmentos en violeta */
 .ruta-seg--violet .ruta-bar-seg { background: linear-gradient(135deg, rgba(91,45,142,.14) 0%, rgba(91,45,142,.06) 100%); }
