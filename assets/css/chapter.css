@@ -4,6 +4,31 @@
 html{scroll-behavior:smooth;}
 body{font-family:'DM Sans',system-ui,sans-serif;background:var(--off);color:var(--text);font-size:16px;line-height:1.7;}
 
+/* NAV STICKY DE CAPÍTULOS */
+.chapter-nav{position:sticky;top:0;z-index:100;background:rgba(13,27,62,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08);}
+.chapter-nav-inner{max-width:1180px;margin:0 auto;padding:.7rem 1.5rem;display:flex;align-items:center;gap:1.5rem;}
+.chapter-nav-brand{font-family:'DM Sans',sans-serif;font-size:.88rem;font-weight:700;color:#fff;text-decoration:none;letter-spacing:-.01em;white-space:nowrap;display:flex;align-items:baseline;gap:.4rem;}
+.chapter-nav-brand strong{color:var(--cyan);font-weight:700;}
+.chapter-nav-brand .ver{font-size:.6rem;font-weight:500;opacity:.55;letter-spacing:.05em;}
+.chapter-nav-dots{display:flex;gap:.25rem;margin:0 0 0 auto;padding:0;list-style:none;flex-wrap:nowrap;}
+.cnav-dot{display:flex;align-items:center;gap:.45rem;padding:.4rem .7rem;border-radius:6px;font-family:'DM Sans',sans-serif;font-size:.68rem;font-weight:600;color:rgba(255,255,255,.55);text-decoration:none;letter-spacing:.05em;text-transform:uppercase;transition:background .2s ease,color .2s ease;}
+.cnav-num{font-family:'DM Serif Display',serif;font-size:.9rem;line-height:1;letter-spacing:-.02em;font-weight:400;text-transform:none;}
+.cnav-title{display:inline;}
+.cnav-dot:hover{color:#fff;background:rgba(255,255,255,.08);}
+.cnav-dot.is-current{color:#fff;background:rgba(0,180,216,.2);}
+.cnav-dot.is-current .cnav-num{color:var(--cyan);}
+@media (max-width:980px){
+  .chapter-nav-inner{padding:.6rem 1rem;gap:1rem;}
+  .cnav-title{display:none;}
+  .cnav-dot{padding:.35rem .55rem;}
+}
+@media (max-width:560px){
+  .chapter-nav-brand .ver{display:none;}
+  .chapter-nav-dots{gap:.15rem;}
+  .cnav-dot{padding:.3rem .4rem;font-size:.62rem;}
+  .cnav-num{font-size:.78rem;}
+}
+
 /* HERO */
 .hero{background:#4B2E8E;min-height:70vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
 /* Variantes de fondo del hero por grupo de movimiento (coherente con cap-cover del home) */
