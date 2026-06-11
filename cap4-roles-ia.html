@@ -54,10 +54,15 @@
     align-items: stretch;
     padding: 8rem clamp(1.5rem, 7vw, 5rem) 4rem;
     overflow: hidden;
-    max-width: 1180px;
-    margin: 0 auto;
     background: transparent;
     min-height: auto;
+  }
+  .hero-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 1180px;
+    margin: 0 auto;
+    width: 100%;
   }
 
   .hero-bg-dots {
@@ -451,36 +456,38 @@
     <path id="roles-orb-inner" d="M260 145 A115 115 0 1 0 259.9 145" fill="none"/>
   </svg>
 
-  <div class="badge">
-    <span class="badge-dot"></span>
-    Capítulo 4 — Cuadro de referencia
-  </div>
-
-  <h1 class="hero-title">
-    <span class="line-main"><span class="t-light">Roles de </span><span class="t-bold">IA</span></span>
-    <span class="line-sub">en Redacciones del Mundo</span>
-  </h1>
-
-  <p class="hero-sub">
-    Un mapa de <strong>80 posiciones reales</strong> en medios de 24 países, organizadas en cuatro familias funcionales: liderazgo estratégico, producción editorial, infraestructura y producto, y formación y gobernanza.
-  </p>
-
-  <div class="hero-stats">
-    <div class="stat-item">
-      <div class="stat-num">80</div>
-      <div class="stat-label">Roles relevados</div>
+  <div class="hero-inner">
+    <div class="badge">
+      <span class="badge-dot"></span>
+      Capítulo 4 — Cuadro de referencia
     </div>
-    <div class="stat-item">
-      <div class="stat-num">24</div>
-      <div class="stat-label">Países</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num">4</div>
-      <div class="stat-label">Familias funcionales</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num"><span>+</span>60</div>
-      <div class="stat-label">Organizaciones</div>
+
+    <h1 class="hero-title">
+      <span class="line-main"><span class="t-light">Roles de </span><span class="t-bold">IA</span></span>
+      <span class="line-sub">en Redacciones del Mundo</span>
+    </h1>
+
+    <p class="hero-sub">
+      Un mapa de <strong>80 posiciones reales</strong> en medios de 24 países, organizadas en cuatro familias funcionales: liderazgo estratégico, producción editorial, infraestructura y producto, y formación y gobernanza.
+    </p>
+
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">80</div>
+        <div class="stat-label">Roles relevados</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">24</div>
+        <div class="stat-label">Países</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">4</div>
+        <div class="stat-label">Familias funcionales</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num"><span>+</span>60</div>
+        <div class="stat-label">Organizaciones</div>
+      </div>
     </div>
   </div>
 

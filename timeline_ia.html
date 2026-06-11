@@ -34,7 +34,8 @@
 body.timeline-body{background:var(--bg-deep);color:var(--text-body);font-family:'DM Sans',system-ui,sans-serif;overflow-x:hidden;}
 
 /* HERO */
-.tl-hero{position:relative;padding:8rem clamp(1.5rem,7vw,5rem) 4rem;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;max-width:1180px;margin:0 auto;min-height:auto;}
+.tl-hero{position:relative;padding:8rem clamp(1.5rem,7vw,5rem) 4rem;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;min-height:auto;}
+.tl-hero-inner{position:relative;z-index:1;max-width:1180px;margin:0 auto;width:100%;}
 .tl-hero-bg-dots{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(0,180,216,.14) 1px,transparent 1px);background-size:32px 32px;-webkit-mask:radial-gradient(120% 110% at 0% 100%,#000 0%,#000 24%,transparent 78%);mask:radial-gradient(120% 110% at 0% 100%,#000 0%,#000 24%,transparent 78%);z-index:0;pointer-events:none;}
 .tl-hero-bg-dots-2{position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.22) 1.2px,transparent 1.5px);background-size:24px 24px;-webkit-mask:radial-gradient(90% 90% at 100% 0%,#000 0%,#000 16%,transparent 62%);mask:radial-gradient(90% 90% at 100% 0%,#000 0%,#000 16%,transparent 62%);z-index:0;pointer-events:none;}
 .tl-hero-svg{position:absolute;top:50%;right:-120px;transform:translateY(-50%);width:520px;height:520px;z-index:0;pointer-events:none;}
@@ -198,15 +199,17 @@ body.timeline-body{background:var(--bg-deep);color:var(--text-body);font-family:
     <path id="tl-orb-inner" d="M260 145 A115 115 0 1 0 259.9 145" fill="none"/>
   </svg>
 
-  <div class="tl-badge">
-    <span class="tl-badge-dot"></span>
-    Capítulo 1 — Recorrido histórico
-  </div>
+  <div class="tl-hero-inner">
+    <div class="tl-badge">
+      <span class="tl-badge-dot"></span>
+      Capítulo 1 — Recorrido histórico
+    </div>
 
-  <h1 class="tl-title">
-    <span class="l1"><span class="light">Línea de </span><span class="bold">Tiempo</span><span class="tl-ver">v2.0</span></span>
-  </h1>
-  <p class="tl-sub">Desde los albores hasta la vanguardia: la evolución de la inteligencia artificial.</p>
+    <h1 class="tl-title">
+      <span class="l1"><span class="light">Línea de </span><span class="bold">Tiempo</span><span class="tl-ver">v2.0</span></span>
+    </h1>
+    <p class="tl-sub">Desde los albores hasta la vanguardia: la evolución de la inteligencia artificial.</p>
+  </div>
 
   <div class="tl-arrow-deco" aria-hidden="true">
     <span class="ln"></span>
