@@ -858,7 +858,7 @@ section[id], header[id] { scroll-margin-top: 88px; }
 .nav-links { display: flex; gap: 1.7rem; list-style: none; }
 .nav-links a { font-family: 'DM Sans', sans-serif; font-size: .76rem; font-weight: 500; letter-spacing: .04em; color: rgba(255,255,255,.62); text-decoration: none; transition: color .18s; white-space: nowrap; }
 .nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--cyan); }
-.nav-cta { font-family: 'DM Sans', sans-serif; font-size: .74rem; font-weight: 600; letter-spacing: .04em; color: var(--navy); background: var(--cyan); text-decoration: none; padding: .62rem 1.1rem; border-radius: 99px; transition: transform .18s, box-shadow .18s; white-space: nowrap; }
+.nav-cta { font-family: 'DM Sans', sans-serif; font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--navy); background: var(--cyan); text-decoration: none; padding: .62rem 1.1rem; border-radius: 99px; transition: transform .18s, box-shadow .18s; white-space: nowrap; }
 .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 8px 22px -10px rgba(0,180,216,.8); }
 .nav-burger { display: none; flex-direction: column; gap: 5px; background: none; border: 0; cursor: pointer; padding: 4px; }
 .nav-burger span { width: 26px; height: 2px; background: #fff; display: block; border-radius: 2px; }
