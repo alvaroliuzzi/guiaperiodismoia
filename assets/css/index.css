@@ -1157,3 +1157,31 @@ html.hide-index .ruta, html.hide-index .ruta-caption { display: none; }
 /* CTA en dark */
 .section--rsc-teaser--dark .rsc-teaser-btn{background:var(--cyan);color:var(--navy);border:1px solid var(--cyan);}
 .section--rsc-teaser--dark .rsc-teaser-btn:hover{background:transparent;color:var(--cyan);gap:.75rem;box-shadow:0 0 0 4px rgba(0,180,216,.18);}
+
+/* ═══ HERO · doble botonera (Explorar la guía + Bibliografía) ═══ */
+.hero-cta-row{display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;}
+.hero-cta-secondary{
+  display:inline-flex;
+  align-items:center;
+  gap:.55rem;
+  background:transparent;
+  border:1.5px solid rgba(255,255,255,.22);
+  color:rgba(255,255,255,.75);
+  font-family:'DM Sans',sans-serif;
+  font-weight:700;
+  font-size:.7rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  text-decoration:none;
+  padding:.85rem 1.4rem;
+  border-radius:99px;
+  transition:background .2s,color .2s,border-color .2s,gap .2s,transform .2s;
+}
+.hero-cta-secondary:hover{
+  color:#fff;
+  border-color:rgba(255,255,255,.55);
+  background:rgba(255,255,255,.04);
+  gap:.75rem;
+  transform:translateY(-1px);
+}
+.hero-cta-secondary .hero-cta-arrow{font-size:.85rem;}
